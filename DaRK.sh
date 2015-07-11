@@ -152,6 +152,18 @@ for i in {59..21} {21..59} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done ; echo
 echo -e '\e[12;41;71m########## INSTALLING FAIL2BIN ################# \e[0m'
    sleep 10s
 echo""
+uname -r
+echo -e '\e[12;41;71m RHEL/CentOS 6 64 Bit OS\e[0m'
+   sleep 10s
+echo""
+wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+rpm -Uvh rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+echo""
+echo""
+wget http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
+rpm --import RPM-GPG-KEY.dag.txt
+echo""
+echo""
 yum -y install fail2ban
 echo""
         sleep 20s
@@ -204,19 +216,16 @@ echo""
 for i in {59..21} {21..59} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done ; echo
 
 
-
-
 echo -e '\e[12;41;71m##############  MAKING SURE THE FIREWALL IS ON AND WILL SHOW THE STAUS #############\e[0m'
 echo""
 chkconfig iptables --list
-echo""
-echo"" sleep 10s
 
-service iptables status
 echo""
  sleep 10s
 echo""
-echo""for i in {59..21} {21..59} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done ; echo
+echo""
+
+for i in {59..21} {21..59} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done ; echo
 
  sleep 10s
 echo""
