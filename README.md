@@ -75,7 +75,6 @@ You will need to configure your phpmyadmin with the setup below
 Now we configure phpMyAdmin. We change the Apache configuration so that phpMyAdmin allows connections not just from localhost 
 
 nano /etc/httpd/conf.d/phpmyadmin.conf
-
 #
 #  Web application to manage MySQL
 #
@@ -89,6 +88,8 @@ nano /etc/httpd/conf.d/phpmyadmin.conf
 Alias /phpmyadmin /usr/share/phpmyadmin
 Alias /phpMyAdmin /usr/share/phpmyadmin
 Alias /mysqladmin /usr/share/phpmyadmin
+
+
 
 Next we change the authentication in phpMyAdmin from cookie to http:
 
